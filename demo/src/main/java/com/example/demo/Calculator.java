@@ -2,26 +2,36 @@ package com.example.demo;
 
 public class Calculator {
     
-    double numerator, denominator;
+    double numerator, denominator, result;
 
     public double Sum(double numerator, double denominator){
-        return numerator + denominator;
+        result = numerator + denominator;
+        return result;
     }
 
     public double Sub (double numerator, double denominator){
-        return numerator + denominator;
+        result = numerator - denominator;
+        return result;
     }
 
     public double Div (double numerator, double denominator){
-        return numerator / denominator;
+        if(denominator == 0){
+            throw new IllegalArgumentException("Cannot div by 0.\n");
+        } else {
+        result = numerator / denominator;
+        return result;
+        }
     }
+    
 
     public double Mult (double numerator, double denominator){
-        return numerator * denominator;
+        result = numerator * denominator;
+        return result;
     }
 
     public double Pot (double numerator, double denominator){
-        return Math.pow(numerator,denominator);
+        result = Math.pow(numerator,denominator);
+        return result;
     }
 
 
